@@ -7,12 +7,12 @@ const typedInstance = ref<Typed>()
 const iconRef = ref<HTMLElement | null>(null)
 const avatarBgRef = ref<HTMLElement | null>(null)
 const avatarImgRef = ref<HTMLElement | null>(null)
-const currentAvatar = ref('Arvin')
+const currentAvatar = ref('Xu Happy')
 function handleSwitch() {
   clearAllSetTimeout()
   avatarImgRef.value?.classList.add('expanding-avatar-circle')
   setTimeout(() => {
-    currentAvatar.value = currentAvatar.value === 'Arvin' ? 'Arvin2' : 'Arvin'
+    currentAvatar.value = currentAvatar.value === 'Xu Happy' ? 'Xu Happy2' : 'Xu Happy'
     avatarBgRef.value?.classList.add('expanding-bg-circle')
     setTimeout(() => {
       avatarBgRef.value?.classList.remove('expanding-bg-circle')
@@ -78,7 +78,7 @@ async function typeSentence1() {
     <div class="pointer-events-none relative min-h-[calc(100%_-_50px)] p-6">
       <div class="relative mb-[30px] h-[96px] w-[96px]">
         <div ref="avatarImgRef" class="avatar-img absolute left-0 top-0 z-20 mb-8 h-[96px] w-[96px] rounded-full dark:bg-[var(--header-avatar-bg)]">
-          <Icon v-if="currentAvatar === 'Arvin'" icon="fluent-emoji:partying-face" class="h-full w-full" />
+          <Icon v-if="currentAvatar === 'Xu Happy'" icon="fluent-emoji:partying-face" class="h-full w-full" />
 
           <img v-else ref="avatarImgRef" class="h-full w-full" src="/logo.png" alt="">
         </div>
@@ -88,7 +88,7 @@ async function typeSentence1() {
       <span ref="$s1" />
 
       <button class="switch-btn pointer-events-auto" @click="handleSwitch">
-        <div ref="iconRef" class="icon" :class="currentAvatar === 'Arvin' ? 'icon_rotate_one' : 'icon_rotate_two'" style="transform: rotate(0);">
+        <div ref="iconRef" class="icon" :class="currentAvatar === 'Xu Happy' ? 'icon_rotate_one' : 'icon_rotate_two'" style="transform: rotate(0);">
           <svg
             width="15.702"
             height="15.702"
@@ -111,11 +111,11 @@ async function typeSentence1() {
 
     <div class="flex flex-row justify-end gap-4 px-6">
       <!-- 简历 -->
-      <a title="简历" class="detail-arrow text-[#1F80FF]" :href="SITE.cv" target="_blank">
+      <!-- <a title="简历" class="detail-arrow text-[#1F80FF]" :href="SITE.cv" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><g fill="none"><path fill="currentColor" d="M6.5 12.5a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0 2.5a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /><path fill="currentColor" fill-rule="evenodd" d="M11.185 1H4.5A1.5 1.5 0 0 0 3 2.5v15A1.5 1.5 0 0 0 4.5 19h11a1.5 1.5 0 0 0 1.5-1.5V7.202a1.5 1.5 0 0 0-.395-1.014l-4.314-4.702A1.5 1.5 0 0 0 11.185 1M4 2.5a.5.5 0 0 1 .5-.5h6.685a.5.5 0 0 1 .369.162l4.314 4.702a.5.5 0 0 1 .132.338V17.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5z" clip-rule="evenodd" /><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.5 2.1v4.7h4.7" /><path fill="currentColor" d="M8.134 6.133a1.067 1.067 0 1 0 0-2.133a1.067 1.067 0 0 0 0 2.133" /><path fill="currentColor" fill-rule="evenodd" d="M10.266 8.444c0-1.134-.955-1.955-2.133-1.955S6 7.309 6 8.444v.534a.356.356 0 0 0 .356.355h3.555a.356.356 0 0 0 .355-.355z" clip-rule="evenodd" /></g></svg>
-      </a>
-      <!-- 掘金 -->
-      <a title="掘金主页" class="detail-arrow text-[#1F80FF]" :href="SITE.juejin" target="_blank">
+      </a> -->
+      <!-- Twitter -->
+      <a title="X" class="detail-arrow text-[#1F80FF]" :href="SITE.twitterUrl" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m12 14.316l7.454-5.88l-2.022-1.625L12 11.1l-.004.003l-5.432-4.288l-2.02 1.624l7.452 5.88Zm0-7.247l2.89-2.298L12 2.453l-.004-.005l-2.884 2.318l2.884 2.3Zm0 11.266l-.005.002l-9.975-7.87L0 12.088l.194.156l11.803 9.308l7.463-5.885L24 12.085l-2.023-1.624Z" /></svg>
       </a>
       <!-- GitHub -->

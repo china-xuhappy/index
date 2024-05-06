@@ -76,7 +76,7 @@ b. 打开 `package.json` 更改一下 `name` 和 `description`。
 {
   "name": "eslint-plugin-custom",
   "version": "0.0.0",
-  "description": "arvin's eslint-config"
+  "description": "Xu Happy's eslint-config"
 }
 ```
 
@@ -109,7 +109,7 @@ c. 开始编写测试用例代码
 ```js
 /**
  * @fileoverview 不许使用 alert
- * @author arvin
+ * @author Xu Happy
  */
 'use strict'
 
@@ -166,7 +166,7 @@ e. 继续开发 Rule 代码
 ```js
 /**
  * @fileoverview 不许使用 alert
- * @author arvin
+ * @author Xu Happy
  */
 'use strict'
 
@@ -232,7 +232,7 @@ if (node.expression.callee.name === 'alert') {
 ```js
 /**
  * @fileoverview 使用 http 替代 https
- * @author arvin
+ * @author Xu Happy
  */
 'use strict'
 
@@ -264,7 +264,7 @@ ruleTester.run('no-http', rule, {
 ```js
 /**
  * @fileoverview 使用 http 替代 https
- * @author arvin
+ * @author Xu Happy
  */
 'use strict'
 
@@ -429,8 +429,8 @@ module.exports = defineConfig({
 
 ```json
 "devDependencies": {
-	"@arvin/eslint-plugin": "workspace:^",
-	"@arvin/eslint-config": "workspace:^"
+	"@Xu Happy/eslint-plugin": "workspace:^",
+	"@Xu Happy/eslint-config": "workspace:^"
 }
 ```
 
@@ -498,7 +498,7 @@ esling-config
 
 然后发完包之后，项目中只需要安装使用就行
 
-- npm i @arvinn/eslint-config -d
+- npm i @Xu Happyn/eslint-config -d
 - 添加到 .eslintrc.cjs ，就可以使用了
 
 ```js
@@ -506,6 +506,6 @@ const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
-  extends: '@arvinn',
+  extends: '@Xu Happyn',
 })
 ```

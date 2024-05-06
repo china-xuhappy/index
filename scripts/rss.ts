@@ -8,7 +8,7 @@ import { Feed } from 'feed'
 
 const DOMAIN = 'https://mmeme.me'
 const AUTHOR = {
-  name: 'Arvin',
+  name: 'Xu Happy',
   email: 'w2545589993@gmail.com',
   link: DOMAIN,
 }
@@ -26,8 +26,8 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'Arvin',
-    description: 'Arvin\' Blog',
+    title: 'Xu Happy',
+    description: 'Xu Happy\' Blog',
     id: 'https://mmeme.me/',
     link: 'https://mmeme.me/',
     copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
